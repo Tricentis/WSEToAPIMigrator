@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEE67191-7D96-49D3-BE36-53036957CFBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WseToApiMigrationAddOn</RootNamespace>
+    <AssemblyName>WseToApiMigrationAddOn</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(COMMANDER_HOME)</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>$(COMMANDER_HOME)\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(COMMANDER_HOME)\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TCAddOn">
+      <HintPath>$(COMMANDER_HOME)\TCAddOn.dll</HintPath>
+    </Reference>
+    <Reference Include="TCAPIObjects">
+      <HintPath>$(COMMANDER_HOME)\TCAPIObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Tricentis.Automation.Resources, Version=12.0.0.19268, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>$(COMMANDER_HOME)\Tricentis.Automation.Resources.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\AddOnConstants.cs" />
+    <Compile Include="Extensions\ApiModuleExtensions.cs" />
+    <Compile Include="Extensions\HttpMethodExtension.cs" />
+    <Compile Include="Extensions\HttpStatusCodeExtension.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TcObjectExtensions.cs" />
+    <Compile Include="Extensions\XModuleAttributeExtensions.cs" />
+    <Compile Include="Helper\AssemblyHelper.cs" />
+    <Compile Include="Helper\BackupProject.cs" />
+    <Compile Include="Helper\SpecializationHelper.cs" />
+    <Compile Include="Migrator\Handler\BodyParamHandler.cs" />
+    <Compile Include="Migrator\Handler\BusinessParameterHandler.cs" />
+    <Compile Include="Helper\CommonUtilities.cs" />
+    <Compile Include="Helper\Enums.cs" />
+    <Compile Include="Helper\ScanTag.cs" />
+    <Compile Include="Helper\UriHelper.cs" />
+    <Compile Include="Helper\Xml\XmlHelper.cs" />
+    <Compile Include="Migrator\Handler\ResourceManagerHandler.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\Model\TestCaseResource.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\Model\TestCaseResourceResult.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\ResponseAsPlainTextSpecializationHandler.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\ResponseAsResourceSpecializationHandler.cs" />
+    <Compile Include="Migrator\Setter\Interfaces\IPayloadSetterFactory.cs" />
+    <Compile Include="Migrator\Setter\Interfaces\IPayloadSetter.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\EmbeddedRequestSpecializationHandler.cs" />
+    <Compile Include="Migrator\Interfaces\IMigrator.cs" />
+    <Compile Include="Migrator\Factory\MigratorFactory.cs" />
+    <Compile Include="Migrator\Setter\Interfaces\IApiRequestValueSetter.cs" />
+    <Compile Include="Migrator\Setter\Interfaces\IApiResponseValueSetter.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiEndpointSetter.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\AbstractResourceSpecializationHandler.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\RequestAsResourceSpecializationHandler.cs" />
+    <Compile Include="Migrator\AbstractCommunicateWithWebServiceArtifactMigrator.cs" />
+    <Compile Include="Migrator\CommunicateWithWebServiceJsonArtifactMigrator.cs" />
+    <Compile Include="Migrator\Setter\Factory\JsonPayloadSetterFactory.cs" />
+    <Compile Include="Migrator\ScannedWebserviceArtifactMigrator.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiRequestBasicAuthSetter.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiRequestHeadersSetter.cs" />
+    <Compile Include="Migrator\Handler\ApiModuleHandler.cs" />
+    <Compile Include="Migrator\Setter\Templates\ApiMultipleValuesSetterTemplate.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiQueryParamSetter.cs" />
+    <Compile Include="Migrator\Setter\ResponseSetter\ApiResponseHeadersSetter.cs" />
+    <Compile Include="Migrator\Setter\Templates\ApiJsonPayloadSetterTemplate.cs" />
+    <Compile Include="Migrator\Setter\Templates\ApiXmlPayloadSetterTemplate.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiRequestJsonPayloadSetter.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiResourceSetter.cs" />
+    <Compile Include="Migrator\Setter\ResponseSetter\ApiResponseJsonPayloadSetter.cs" />
+    <Compile Include="Migrator\Setter\ResponseSetter\ApiResponseXmlPayloadSetter.cs" />
+    <Compile Include="Migrator\Setter\ResponseSetter\ApiStatusCodeSetter.cs" />
+    <Compile Include="Helper\CommonParserMethods.cs" />
+    <Compile Include="Migrator\Setter\Templates\ApiValuesSetterTemplate.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiMethodSetter.cs" />
+    <Compile Include="Migrator\Handler\FolderStructureHandler.cs" />
+    <Compile Include="Migrator\Setter\Interfaces\IApiValueSetter.cs" />
+    <Compile Include="Migrator\Setter\RequestSetter\ApiRequestXmlPayloadSetter.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\Factory\SpecializationFactory.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\AbstractSpecializationHandler.cs" />
+    <Compile Include="Migrator\CommunicateWithWebServiceXmlArtifactMigrator.cs" />
+    <Compile Include="Migrator\Handler\SpecializationHandlers\EmbeddedResponseSpecializationHandler.cs" />
+    <Compile Include="Migrator\Setter\Factory\XmlPayloadSetterFactory.cs" />
+    <Compile Include="Migrator\Parser\Interfaces\IPayloadParser.cs" />
+    <Compile Include="Migrator\Parser\WseTestStepParser.cs" />
+    <Compile Include="Migrator\Parser\AddressParser.cs" />
+    <Compile Include="Migrator\Parser\Model\AddressParserResult.cs" />
+    <Compile Include="Migrator\Parser\HeaderParser.cs" />
+    <Compile Include="Migrator\Parser\Interfaces\IWseValueParser.cs" />
+    <Compile Include="Migrator\Parser\JsonPayloadParser.cs" />
+    <Compile Include="Migrator\Parser\MethodParser.cs" />
+    <Compile Include="Migrator\Parser\StatusCodeParser.cs" />
+    <Compile Include="Migrator\Parser\WseModuleParser.cs" />
+    <Compile Include="Migrator\WseTestStepMigrator.cs" />
+    <Compile Include="Migrator\Parser\IWseArtifactsParser.cs" />
+    <Compile Include="Migrator\Parser\XmlPayloadParser.cs" />
+    <Compile Include="Shared\FileLogger.cs" />
+    <Compile Include="Shared\ReportGenerator.cs" />
+    <Compile Include="Tasks\WseArtifactsImportTask.cs" />
+    <Compile Include="WseToApiMigrationAddOn.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InstallerScript\License.rtf" />
+    <None Include="InstallerScript\WseToApiMigrator.nsi" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InstallerScript\MUI_ICON.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
