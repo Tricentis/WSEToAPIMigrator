@@ -133,7 +133,6 @@
     <Compile Include="Migrator\Parser\IWseArtifactsParser.cs" />
     <Compile Include="Migrator\Parser\XmlPayloadParser.cs" />
     <Compile Include="Shared\FileLogger.cs" />
-    <Compile Include="Shared\ReportGenerator.cs" />
     <Compile Include="Tasks\WseArtifactsImportTask.cs" />
     <Compile Include="WseToApiMigrationAddOn.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
