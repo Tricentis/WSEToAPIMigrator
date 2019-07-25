@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
-using WseToApiMigrationAddOn.Helper;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler {
     /// <summary>
     /// Creates and set module attributes at module and teststep
     /// </summary>

@@ -2,12 +2,13 @@
 
 using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     /// <summary>
     /// Extension Methods for API XModule
     /// </summary>
     public static class ApiModuleExtensions {
         #region Public Methods and Operators
+
         /// <summary>
         /// Creates configuration param
         /// </summary>
@@ -23,6 +24,7 @@ namespace WseToApiMigrationAddOn.Extensions {
             newXParam.ParamType = ParamTypeE.Configuration;
             if (name == "Password") newXParam.Visible = false;
         }
+
         /// <summary>
         /// Add HTTP Headers to API Module
         /// </summary>

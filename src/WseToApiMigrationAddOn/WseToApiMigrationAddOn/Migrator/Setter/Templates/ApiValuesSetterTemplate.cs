@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Text.RegularExpressions;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates {
     /// <summary>
     /// 
     /// </summary>

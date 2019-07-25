@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Reflection;
 
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Load a assembly at run-time and get its class and Method
     /// </summary>
     public static class AssemblyHelper {
         #region Public Methods and Operators
+
         /// <summary>
         /// Load a assembly at run-time and get its class and Method
         /// </summary>

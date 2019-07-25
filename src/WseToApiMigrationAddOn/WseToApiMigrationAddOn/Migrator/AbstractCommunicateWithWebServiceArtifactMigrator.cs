@@ -1,16 +1,15 @@
 ﻿using System;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Handler;
-using WseToApiMigrationAddOn.Migrator.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Parser;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator {
     /// <summary>
     /// Abstract Migrator for migrating WSE Artifacts created using "CommunicateWithWebService" Standard Module.
     /// </summary>

@@ -3,7 +3,7 @@ using System.IO;
 
 using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Creation of backup of workspace.
     /// </summary>

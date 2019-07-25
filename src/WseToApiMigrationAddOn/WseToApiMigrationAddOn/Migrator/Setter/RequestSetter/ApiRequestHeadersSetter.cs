@@ -4,14 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
     /// <summary>
     /// Extracts headers of tranpport information and creates module attribute for them.
     /// Retrieves all headers in APi module.
@@ -64,6 +63,7 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
 
             return string.Empty;
         }
+
         /// <summary>
         /// Extracts all headers from wseteststep value as key value pairs
         /// </summary>

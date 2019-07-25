@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
     /// <summary>
     /// Matches regex pattern for json path and retrns json path
     /// </summary>
@@ -29,7 +28,6 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
             var v = Convert.ToInt32(match.Groups[1].Value) - 1;
             return "[" + v + "]";
         }
-
 
         public override string GetJsonPath(XTestStep wseTestStep, XTestStepValue wseTestStepValue, string jsonPath) {
             return jsonPath;

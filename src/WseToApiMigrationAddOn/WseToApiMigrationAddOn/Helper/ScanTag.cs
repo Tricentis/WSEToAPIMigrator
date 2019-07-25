@@ -1,11 +1,10 @@
 ﻿using System.Linq;
 using System.Text;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Parser;
-
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Create ScanTag for uniquely identify a API Request/Response Module 
     /// </summary>
@@ -31,6 +30,7 @@ namespace WseToApiMigrationAddOn.Helper {
         #endregion
 
         #region Methods
+
         /// <summary>
         /// Create ScanTag for uniquely identify a API Request/Response Module from WSE artifacts 
         /// </summary>

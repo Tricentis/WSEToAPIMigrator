@@ -1,8 +1,8 @@
-﻿using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.RequestSetter;
-using WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter;
+﻿using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter;
 
-namespace WseToApiMigrationAddOn.Migrator.Setter.Factory {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Factory {
     public class XmlPayloadSetterFactory : IPayloadSetterFactory {
         #region Public Methods and Operators
 

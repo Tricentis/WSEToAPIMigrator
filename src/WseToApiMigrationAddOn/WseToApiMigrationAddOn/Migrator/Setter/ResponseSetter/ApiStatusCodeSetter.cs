@@ -1,12 +1,11 @@
 ﻿using System;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
     /// <summary>
     /// Setter to create modue attribute for response attribute.
     /// </summary>
@@ -26,6 +25,7 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
         #endregion
 
         #region Methods
+
         /// <summary>
         /// Create module attribute for status code in respinse module of API
         /// </summary>

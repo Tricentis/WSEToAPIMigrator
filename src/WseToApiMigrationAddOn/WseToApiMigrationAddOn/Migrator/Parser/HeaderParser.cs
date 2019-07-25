@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-
-namespace WseToApiMigrationAddOn.Migrator.Parser {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser {
     /// <summary>
     /// Gets HTTP Headers from WSE Artifacts 
     /// </summary>

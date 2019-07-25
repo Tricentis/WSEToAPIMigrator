@@ -7,7 +7,7 @@
     <ProjectGuid>{CEE67191-7D96-49D3-BE36-53036957CFBE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WseToApiMigrationAddOn</RootNamespace>
+    <RootNamespace>Tricentis.Automation.WseToApiMigrationAddOn</RootNamespace>
     <AssemblyName>WseToApiMigrationAddOn</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

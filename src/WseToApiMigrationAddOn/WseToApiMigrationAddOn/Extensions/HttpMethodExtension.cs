@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-using WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     /// <summary>
     /// All HTTP Methods Supported by Tosca
     /// </summary>

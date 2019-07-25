@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WseToApiMigrationAddOn.Migrator.Parser {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser {
     public interface IWseArtifactsParser {
         #region Public Properties
 

@@ -2,7 +2,7 @@
 
 using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     public static class XModuleAttributeExtensions {
         #region Public Methods and Operators
 

@@ -1,6 +1,6 @@
 ﻿using Tricentis.TCAddOns;
 
-namespace WseToApiMigrationAddOn {
+namespace Tricentis.Automation.WseToApiMigrationAddOn {
     /// <summary>
     /// TCAddOn for migrating WSE Engine Artifacts to API Engine Artifacts (Supported Tosca Versions 11.3,12.0,12.1,12.2)
     /// </summary>

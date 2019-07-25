@@ -1,14 +1,13 @@
 ﻿using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Factory;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Handler;
-using WseToApiMigrationAddOn.Migrator.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Parser;
-using WseToApiMigrationAddOn.Migrator.Setter.Factory;
-
-namespace WseToApiMigrationAddOn.Migrator {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator {
     /// <summary>
     /// Migrates WSE Artifacts created using NON-UI Scan.
     /// </summary>

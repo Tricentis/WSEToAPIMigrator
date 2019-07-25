@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Reflection;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
     /// <summary>
     /// Sets basic authentication in API module 
     /// </summary>

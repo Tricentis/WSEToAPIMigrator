@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model {
     public class TestCaseResource {
         #region Public Properties
 

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates {
     public abstract class ApiMultipleValuesSetterTemplate : IApiValueSetter {
         #region Properties
 
@@ -58,7 +57,21 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
             }
         }
 
-        private XTestStepValue GetOrCreateApiXTestStepValue(XTestStep apiTestStep, KeyValuePair<string, string> wseTestStepValue) {
+        #endregion
+
+        #region Methods
+
+        protected abstract XModuleAttribute CreateModuleAttribute(ApiModule apiModule,
+                                                                  KeyValuePair<string, string> wseTestStepValue);
+
+        protected abstract string GetValueInApiModule(ApiModule apiModule, string key);
+
+        protected abstract Dictionary<string, string> GetWseTestStepValueAsKeyValPair(XTestStep testStep);
+
+        protected abstract void UpdateValueRange(XTestStepValue apiTeststepValue, string apiValue, string wseValue);
+
+        private XTestStepValue GetOrCreateApiXTestStepValue(XTestStep apiTestStep,
+                                                            KeyValuePair<string, string> wseTestStepValue) {
             XTestStepValue apiTeststepValue =
                     (XTestStepValue)apiTestStep
                                     .Search(string.Format(TqlToGetApiTestStepValue, wseTestStepValue.Key))
@@ -86,19 +99,6 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
 
             return apiTeststepValue;
         }
-
-        #endregion
-
-        #region Methods
-
-        protected abstract XModuleAttribute CreateModuleAttribute(ApiModule apiModule,
-                                                                  KeyValuePair<string, string> wseTestStepValue);
-
-        protected abstract string GetValueInApiModule(ApiModule apiModule, string key);
-
-        protected abstract Dictionary<string, string> GetWseTestStepValueAsKeyValPair(XTestStep testStep);
-
-        protected abstract void UpdateValueRange(XTestStepValue apiTeststepValue, string apiValue, string wseValue);
 
         #endregion
     }

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Model;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Parser.Model;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Parser {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser {
     /// <summary>
     /// Extracts Endpoint, Resource and Query Params from Wse Artifacts
     /// </summary>

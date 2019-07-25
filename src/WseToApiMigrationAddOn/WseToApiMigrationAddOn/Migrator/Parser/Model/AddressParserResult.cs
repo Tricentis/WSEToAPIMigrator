@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace WseToApiMigrationAddOn.Migrator.Parser.Model {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Model {
     public class AddressParserResult {
         #region Public Properties
 

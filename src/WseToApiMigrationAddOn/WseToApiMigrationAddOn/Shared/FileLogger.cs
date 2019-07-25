@@ -10,7 +10,7 @@ using log4net.Repository.Hierarchy;
 
 using Tricentis.TCAddOns;
 
-namespace WseToApiMigrationAddOn.Shared {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Shared {
     /// <summary>
     /// Singleton class which can be used for logging.
     /// A separate Log Repository is created when the logger is created. This ensures that we are not affecting any other logger settings which

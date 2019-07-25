@@ -1,4 +1,4 @@
-﻿namespace WseToApiMigrationAddOn.Migrator.Parser.Interfaces {
+﻿namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces {
     public interface IWseValueParser {
     }
 }

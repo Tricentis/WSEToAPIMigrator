@@ -1,11 +1,10 @@
 ﻿using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Parser;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler {
     /// <summary>
     ///  Identify location of existing WSE Modules and create generic folder for storing API modules
     /// </summary>

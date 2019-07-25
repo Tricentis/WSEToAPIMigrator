@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
     /// <summary>
     /// Extracts all response headers and creates module attributes in API Response module.
     /// </summary>
@@ -26,6 +25,7 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
         #endregion
 
         #region Methods
+
         /// <summary>
         /// Creates module attribute for response headers.
         /// </summary>

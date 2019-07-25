@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Handler;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates {
     public abstract class ApiXmlPayloadSetterTemplate : IApiValueSetter, IPayloadSetter {
         #region Properties
 
@@ -49,19 +48,6 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
 
         public void Execute(XTestStep apiTestStep, XTestStep wseTestStep) {
             FillPayload(apiTestStep, wseTestStep);
-        }
-
-        private void FillPayload(XTestStep apiTestStep,
-                                XTestStep wseTestStep) {
-            var tcObjects = wseTestStep.Search(TqlToGetWseTestStepValue)
-                                       .Cast<XTestStepValue>().ToList();
-
-            FillPayloadInternal(tcObjects,
-                                apiTestStep,
-                                wseTestStep,
-                                string.Empty,
-                                (ApiModule)apiTestStep.Module,
-                                apiTestStep);
         }
 
         /// <summary>
@@ -120,6 +106,23 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
                             $"Error occurred while creating Business Parameter for WSE TestStep : 'Name: {wseTestStep?.Name}' NodePath:'{wseTestStep?.NodePath}' TestStepValue:'{wseTestStepValue?.Name}' Exception:'{ex.ToString()}'");
                 }
             }
+        }
+
+        #endregion
+
+        #region Methods
+
+        private void FillPayload(XTestStep apiTestStep,
+                                 XTestStep wseTestStep) {
+            var tcObjects = wseTestStep.Search(TqlToGetWseTestStepValue)
+                                       .Cast<XTestStepValue>().ToList();
+
+            FillPayloadInternal(tcObjects,
+                                apiTestStep,
+                                wseTestStep,
+                                string.Empty,
+                                (ApiModule)apiTestStep.Module,
+                                apiTestStep);
         }
 
         #endregion

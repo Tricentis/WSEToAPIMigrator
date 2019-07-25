@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Factory;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers;
-using WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Factory;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.RequestSetter;
-using WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator {
     /// <summary>
     /// Creates API TestStep Request-Response pair and Migrates WSE TestStep data to API TestStep pair
     /// </summary>

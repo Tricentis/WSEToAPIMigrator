@@ -2,12 +2,11 @@
 using System.Linq;
 using System.Xml.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper.Xml;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper.Xml;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-
-namespace WseToApiMigrationAddOn.Migrator.Parser {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser {
     /// <summary>
     /// Extracts payload in string format from WSE artifacts
     /// </summary>

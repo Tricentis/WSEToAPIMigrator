@@ -3,7 +3,7 @@ using System.Linq;
 
 using Tricentis.Automation.Resources;
 
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model {
     public class TestCaseResourceResult : IResource {
         #region Public Properties
 

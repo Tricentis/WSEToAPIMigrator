@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
     /// <summary>
     /// Handles Web service request/response data in Xml/JSON Resource specialization
     /// Handles Web service request/response data in Json Plain Text specialization  
@@ -21,6 +20,7 @@ namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
         #endregion
 
         #region Public Methods and Operators
+
         /// <summary>
         /// Handles Web service request/response data in Xml/JSON Resource specialization
         /// </summary>

@@ -5,12 +5,13 @@ using System.Xml.Linq;
 
 using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Helper.Xml {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper.Xml {
     /// <summary>
     /// Creates Xml structure from Wse XModuleAttributes and XTestStepValues for API Engine Payload section
     /// </summary>
     public static class XmlHelper {
         #region Public Methods and Operators
+
         /// <summary>
         /// Creates Xml structure from Wse XModuleAttributes for API Modules Payload section
         /// </summary>
@@ -54,6 +55,7 @@ namespace WseToApiMigrationAddOn.Helper.Xml {
 
             return xmlStructure;
         }
+
         /// <summary>
         /// Creates Xml structure from Wse XTestStepValue for API Modules Payload section
         /// </summary>
@@ -98,6 +100,7 @@ namespace WseToApiMigrationAddOn.Helper.Xml {
 
             return xmlStructure;
         }
+
         /// <summary>
         /// Removes a child node from its parent node in a Xml Structure
         /// </summary>

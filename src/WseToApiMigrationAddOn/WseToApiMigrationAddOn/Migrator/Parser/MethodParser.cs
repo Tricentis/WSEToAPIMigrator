@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Parser {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser {
     /// <summary>
     /// Extracts HTTP Method from WSE artifact
     /// </summary>

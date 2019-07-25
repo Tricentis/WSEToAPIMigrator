@@ -5,13 +5,6 @@ VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WseToApiMigrationAddOn", "WseToApiMigrationAddOn\WseToApiMigrationAddOn.csproj", "{CEE67191-7D96-49D3-BE36-53036957CFBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WseToApiMigrationAddOnTest", "WseToApiMigrationAddOnTest\WseToApiMigrationAddOnTest.csproj", "{8908B0D0-D2F2-4828-8DDC-0FB25DB76FC7}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E108752-56C7-4D40-BED2-7CE18E800389}"
-	ProjectSection(SolutionItems) = preProject
-		WseToApiMigrationAddOn.sln.DotSettings = WseToApiMigrationAddOn.sln.DotSettings
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,10 +15,6 @@ Global
 		{CEE67191-7D96-49D3-BE36-53036957CFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEE67191-7D96-49D3-BE36-53036957CFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEE67191-7D96-49D3-BE36-53036957CFBE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8908B0D0-D2F2-4828-8DDC-0FB25DB76FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8908B0D0-D2F2-4828-8DDC-0FB25DB76FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8908B0D0-D2F2-4828-8DDC-0FB25DB76FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8908B0D0-D2F2-4828-8DDC-0FB25DB76FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

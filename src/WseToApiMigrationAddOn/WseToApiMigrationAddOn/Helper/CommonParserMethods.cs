@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Handler;
-
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Create Body Parameter for Request and Response Api Modules for Transform Request/Response Wse XTestStepValues
     /// </summary>
     public class CommonParserMethods {
         #region Public Methods and Operators
+
         /// <summary>
         /// Create Body Parameter for Request API Modules for Transform Request WSE XTestStepValues
         /// </summary>
@@ -32,6 +32,7 @@ namespace WseToApiMigrationAddOn.Helper {
                 //ignored
             }
         }
+
         /// <summary>
         /// Create Body Parameter for Response API Modules for Transform Response WSE XTestStepValues
         /// </summary>

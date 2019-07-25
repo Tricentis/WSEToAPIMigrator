@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     /// <summary>
     /// HTTP Status Code Helper Methods
     /// </summary>

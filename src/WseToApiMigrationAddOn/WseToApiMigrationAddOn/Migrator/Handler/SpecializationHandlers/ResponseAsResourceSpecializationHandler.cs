@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
     /// <summary>
     /// Handles Web service response data in Xml/JSON Resource specialization 
     /// </summary>
@@ -25,6 +24,7 @@ namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
         #endregion
 
         #region Public Methods and Operators
+
         /// <summary>
         /// Handles response data in Xml/JSON Resource specialization
         /// </summary>

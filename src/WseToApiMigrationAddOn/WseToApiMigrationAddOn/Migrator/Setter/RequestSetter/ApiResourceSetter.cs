@@ -1,13 +1,12 @@
 ﻿using System;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
     /// <summary>
     /// Sets Resource property in Api Module
     /// </summary>
@@ -25,6 +24,7 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
         #endregion
 
         #region Methods
+
         /// <summary>
         /// Creates Module attribute for Resource property
         /// </summary>

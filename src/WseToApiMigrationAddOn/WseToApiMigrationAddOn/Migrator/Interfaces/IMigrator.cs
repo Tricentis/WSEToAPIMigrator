@@ -1,6 +1,6 @@
 ﻿using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Migrator.Interfaces {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Interfaces {
     public interface IMigrator {
         #region Public Methods and Operators
 

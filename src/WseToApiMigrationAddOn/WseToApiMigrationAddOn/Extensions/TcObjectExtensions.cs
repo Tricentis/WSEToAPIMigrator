@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAddOns;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     public static class TcObjectExtensions {
         #region Public Methods and Operators
 

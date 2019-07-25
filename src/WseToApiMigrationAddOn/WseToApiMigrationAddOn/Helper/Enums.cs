@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     public enum ModuleType {
         [Description("Null")]
         Null,

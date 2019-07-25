@@ -5,19 +5,19 @@ using System.Text.RegularExpressions;
 
 using Newtonsoft.Json.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions.Tricentis.Automation.Api.Core.Extensions;
-using WseToApiMigrationAddOn.Migrator.Handler;
-using WseToApiMigrationAddOn.Migrator.Parser;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Contains methods which are commonly used by different classes
     /// </summary>
     public static class CommonUtilities {
         #region Public Methods and Operators
+
         /// <summary>
         /// construct json payload for Api modules
         /// </summary>
@@ -50,6 +50,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return jObject;
         }
+
         /// <summary>
         /// construct json payload for Api modules
         /// </summary>
@@ -82,6 +83,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return jObject;
         }
+
         /// <summary>
         /// Create API Modules Folder Name on the basis of SoapAction, Resource, Endpoint and Method(HttpVerbs)
         /// </summary>
@@ -109,6 +111,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return "UnknownResource";
         }
+
         /// <summary>
         /// Replace some special characters in nodepath 
         /// </summary>
@@ -120,6 +123,7 @@ namespace WseToApiMigrationAddOn.Helper {
             nodePath = Regex.Replace(nodePath, "\"", "\\\"");
             return nodePath;
         }
+
         /// <summary>
         /// Get WseTestSteps on the basis of TQL
         /// </summary>
@@ -146,6 +150,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return list;
         }
+
         /// <summary>
         /// Get Query Param Keys from list of query params list
         /// </summary>
@@ -161,6 +166,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return string.Empty;
         }
+
         /// <summary>
         /// Get SoapAction from headers
         /// </summary>
@@ -195,6 +201,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return soapAction;
         }
+
         /// <summary>
         /// Modify ContentType Header value to empty in case it contains buffer, CP and XL reference.
         /// </summary>
@@ -208,6 +215,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return headers;
         }
+
         /// <summary>
         /// Remove extra double quotes from ContentType to ""
         /// </summary>
@@ -222,6 +230,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return newStr;
         }
+
         /// <summary>
         /// Replace Resource with LastResponseResource in Existing TestSteps
         /// </summary>
@@ -258,6 +267,7 @@ namespace WseToApiMigrationAddOn.Helper {
                 FileLogger.Instance.Error("There is an issue in creating resource manager list.", ex);
             }
         }
+
         /// <summary>
         /// Get Request/Response API Module on the basis of scanTag.
         /// </summary>

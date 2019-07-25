@@ -1,12 +1,11 @@
 ﻿using System;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Parser;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler {
     /// <summary>
     /// Create request and response module pair
     /// </summary>

@@ -1,9 +1,8 @@
-﻿using Tricentis.TCAPIObjects.Objects;
+﻿using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
     /// <summary>
     /// Handles all types of Specialization for WSE Artifacts
     /// </summary>
@@ -15,6 +14,7 @@ namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
         #endregion
 
         #region Public Methods and Operators
+
         /// <summary>
         /// Handles all types of Specialization for WSE TestStep
         /// </summary>

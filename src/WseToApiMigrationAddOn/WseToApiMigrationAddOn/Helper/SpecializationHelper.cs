@@ -3,12 +3,13 @@ using System.Linq;
 
 using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Identify whether WSE XtestStepvalues(Request/Response) is using any type specialization
     /// </summary>
     public class SpecializationHelper {
         #region Public Methods and Operators
+
         /// <summary>
         /// Identify whether WSE XtestStepvalues(Request) is using Web service request data in JSON Resource specialization
         /// Identify whether WSE XtestStepvalues(Request) is using Web service request data in XML Resource specialization
@@ -24,6 +25,7 @@ namespace WseToApiMigrationAddOn.Helper {
             };
             return IsUsingEmbeddedModule(testStep, name, specializationModulesToExclude, out embeddedModule);
         }
+
         /// <summary>
         /// Identify whether WSE XtestStepvalues(Response) is using Web service response data in JSON Resource specialization
         /// Identify whether WSE XtestStepvalues(Response) is using Web service response data in XML Resource specialization
@@ -40,6 +42,7 @@ namespace WseToApiMigrationAddOn.Helper {
             };
             return IsUsingEmbeddedModule(testStep, name, specializationModulesToExclude, out embeddedModule);
         }
+
         /// <summary>
         /// Identify whether WSE XtestStepvalues(Request/Response) is using Web service request/response data in JSON Resource specialization
         /// Identify whether WSE XtestStepvalues(Request/Response) is using Web service request/response data in XML Resource specialization

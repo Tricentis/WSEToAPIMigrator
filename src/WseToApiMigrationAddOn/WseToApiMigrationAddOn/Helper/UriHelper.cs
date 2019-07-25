@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WseToApiMigrationAddOn.Helper {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Helper {
     /// <summary>
     /// Get Endpoint and Resource from uri
     /// </summary>
     public static class UriHelper {
         #region Public Methods and Operators
+
         /// <summary>
         /// Split QueryParams from uri
         /// </summary>
@@ -28,6 +29,7 @@ namespace WseToApiMigrationAddOn.Helper {
 
             return new Dictionary<string, string>();
         }
+
         /// <summary>
         /// Split Endpoint from uri
         /// </summary>
@@ -51,6 +53,7 @@ namespace WseToApiMigrationAddOn.Helper {
                 return uri;
             }
         }
+
         /// <summary>
         /// Split Resource from uri
         /// </summary>

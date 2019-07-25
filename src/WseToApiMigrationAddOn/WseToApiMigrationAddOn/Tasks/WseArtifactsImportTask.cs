@@ -1,15 +1,14 @@
 ﻿using System;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Factory;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAddOns;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Factory;
-using WseToApiMigrationAddOn.Migrator.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Tasks {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Tasks {
     /// <summary>
     /// Migration task for Migrating WSE Artifacts to API Engine Artifacts.
     /// </summary>

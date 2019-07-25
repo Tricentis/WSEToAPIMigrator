@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
     /// <summary>
     /// Extracts and sets Request payload of XML of wse into API teststep.
     /// </summary>
@@ -21,6 +20,7 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.RequestSetter {
         #endregion
 
         #region Public Methods and Operators
+
         /// <summary>
         /// Recursive call to method to fill request payload for XML from WSE to API
         /// </summary>

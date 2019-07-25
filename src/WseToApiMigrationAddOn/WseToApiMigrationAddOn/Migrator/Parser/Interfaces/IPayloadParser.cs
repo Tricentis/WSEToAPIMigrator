@@ -1,6 +1,6 @@
 ﻿using Tricentis.TCAPIObjects.Objects;
 
-namespace WseToApiMigrationAddOn.Migrator.Parser.Interfaces {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces {
     public interface IPayloadParser {
         #region Public Methods and Operators
 

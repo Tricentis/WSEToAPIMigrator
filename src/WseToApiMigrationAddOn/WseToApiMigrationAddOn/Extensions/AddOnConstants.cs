@@ -2,7 +2,7 @@
 
 using Tricentis.TCAddOns;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     /// <summary>
     /// All constants used through-out the project
     /// </summary>

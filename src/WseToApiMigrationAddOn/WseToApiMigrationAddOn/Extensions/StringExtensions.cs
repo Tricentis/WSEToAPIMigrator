@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace WseToApiMigrationAddOn.Extensions {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Extensions {
     namespace Tricentis.Automation.Api.Core.Extensions {
         public static class StringExtensions {
             #region Public Methods and Operators

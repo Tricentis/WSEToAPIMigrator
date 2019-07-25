@@ -1,10 +1,9 @@
 ﻿using System.Linq;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Interfaces;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Migrator.Interfaces;
-
-namespace WseToApiMigrationAddOn.Migrator.Factory {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Factory {
     public static class MigratorFactory {
         #region Public Methods and Operators
 

@@ -1,8 +1,7 @@
 ﻿using Tricentis.Automation.Resources;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model;
 
-using WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Model;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler {
     /// <summary>
     /// Add and Remove resources in ResourceManager for a ResourceId
     /// </summary>

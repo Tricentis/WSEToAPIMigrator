@@ -1,9 +1,10 @@
-﻿namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Factory {
+﻿namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers.Factory {
     /// <summary>
     /// Initializes specialization chain
     /// </summary>
     public static class SpecializationFactory {
         #region Public Methods and Operators
+
         /// <summary>
         /// Initializes Request specialization chain
         /// </summary>
@@ -14,6 +15,7 @@
             h1.SetSuccessor(h2);
             return h1;
         }
+
         /// <summary>
         /// Initializes Response specialization chain
         /// </summary>

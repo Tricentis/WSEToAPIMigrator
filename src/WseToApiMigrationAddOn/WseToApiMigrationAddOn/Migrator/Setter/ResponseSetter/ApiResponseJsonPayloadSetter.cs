@@ -1,7 +1,7 @@
-﻿using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Templates;
+﻿using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates;
 
-namespace WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.ResponseSetter {
     /// <summary>
     /// Extracts wsetestStepvalues using TQL to process json payload
     /// </summary>

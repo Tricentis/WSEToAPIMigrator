@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Shared;
 using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Handler;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-using WseToApiMigrationAddOn.Shared;
-
-namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Templates {
     /// <summary>
     /// Extracts payload from WSE teststep and sets it in API module object
     /// Creates module attributes for payload
@@ -68,57 +67,6 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
             return jsonPath;
         }
 
-        private void FillPayload(XTestStep apiTestStep,
-                                XTestStep wseTestStep) {
-            try {
-                var tcObjects = wseTestStep.Search(TqlToGetAllWseTestStepValue).Cast<XTestStepValue>().ToList();
-                FillPayloadRec(apiTestStep, wseTestStep, tcObjects, apiTestStep.Module, apiTestStep, string.Empty);
-            }
-            catch (Exception ex) {
-                FileLogger.Instance.Error("Unable to creation payload ", ex);
-            }
-        }
-
-        private void FillPayloadRec(XTestStep apiTestStep,
-                                   XTestStep wseTestStep,
-                                   List<XTestStepValue> tcObjects,
-                                   dynamic moduleData,
-                                   dynamic testStepData,
-                                   string jsonPath) {
-            var arrayTemplate = "{0}";
-            var objectTemplate = ".{0}";
-            try {
-                int index = 0;
-                foreach (var wseTestStepValue in tcObjects) {
-                    string curJsonPath;
-                    if (wseTestStepValue.ParentValue.ModuleAttribute.BusinessType == "JsonArray") {
-                        curJsonPath = jsonPath + string.Format(arrayTemplate, $"[{Convert.ToString(index++)}]");
-                    }
-                    else {
-                        curJsonPath = jsonPath + string.Format(objectTemplate, wseTestStepValue.Name);
-                    }
-
-                    curJsonPath = GetJsonPath(wseTestStep, wseTestStepValue, curJsonPath);
-                    var apiXTestStepValue = CreateModuleAttributeForPayload(wseTestStepValue,
-                                                                            curJsonPath,
-                                                                            moduleData,
-                                                                            (ApiModule)apiTestStep.Module,
-                                                                            testStepData,
-                                                                            wseTestStepValue
-                                                                                    .ModuleAttribute?.Cardinality);
-                    FillPayloadRec(apiTestStep,
-                                   wseTestStep,
-                                   wseTestStepValue.SubValues.ToList(),
-                                   apiXTestStepValue.ModuleAttribute,
-                                   apiXTestStepValue,
-                                   curJsonPath);
-                }
-            }
-            catch (Exception ex) {
-                FileLogger.Instance.Error("Error while creating module attribute {1} ", ex);
-            }
-        }
-
         /// <summary>
         /// Evaluates Json path of wseteststep values.
         /// </summary>
@@ -160,6 +108,57 @@ namespace WseToApiMigrationAddOn.Migrator.Setter.Templates {
         private string Evaluator2(Match match) {
             var v = Convert.ToInt32(match.Groups[1].Value) - 1;
             return "[" + v + "]";
+        }
+
+        private void FillPayload(XTestStep apiTestStep,
+                                 XTestStep wseTestStep) {
+            try {
+                var tcObjects = wseTestStep.Search(TqlToGetAllWseTestStepValue).Cast<XTestStepValue>().ToList();
+                FillPayloadRec(apiTestStep, wseTestStep, tcObjects, apiTestStep.Module, apiTestStep, string.Empty);
+            }
+            catch (Exception ex) {
+                FileLogger.Instance.Error("Unable to creation payload ", ex);
+            }
+        }
+
+        private void FillPayloadRec(XTestStep apiTestStep,
+                                    XTestStep wseTestStep,
+                                    List<XTestStepValue> tcObjects,
+                                    dynamic moduleData,
+                                    dynamic testStepData,
+                                    string jsonPath) {
+            var arrayTemplate = "{0}";
+            var objectTemplate = ".{0}";
+            try {
+                int index = 0;
+                foreach (var wseTestStepValue in tcObjects) {
+                    string curJsonPath;
+                    if (wseTestStepValue.ParentValue.ModuleAttribute.BusinessType == "JsonArray") {
+                        curJsonPath = jsonPath + string.Format(arrayTemplate, $"[{Convert.ToString(index++)}]");
+                    }
+                    else {
+                        curJsonPath = jsonPath + string.Format(objectTemplate, wseTestStepValue.Name);
+                    }
+
+                    curJsonPath = GetJsonPath(wseTestStep, wseTestStepValue, curJsonPath);
+                    var apiXTestStepValue = CreateModuleAttributeForPayload(wseTestStepValue,
+                                                                            curJsonPath,
+                                                                            moduleData,
+                                                                            (ApiModule)apiTestStep.Module,
+                                                                            testStepData,
+                                                                            wseTestStepValue
+                                                                                    .ModuleAttribute?.Cardinality);
+                    FillPayloadRec(apiTestStep,
+                                   wseTestStep,
+                                   wseTestStepValue.SubValues.ToList(),
+                                   apiXTestStepValue.ModuleAttribute,
+                                   apiXTestStepValue,
+                                   curJsonPath);
+                }
+            }
+            catch (Exception ex) {
+                FileLogger.Instance.Error("Error while creating module attribute {1} ", ex);
+            }
         }
 
         #endregion

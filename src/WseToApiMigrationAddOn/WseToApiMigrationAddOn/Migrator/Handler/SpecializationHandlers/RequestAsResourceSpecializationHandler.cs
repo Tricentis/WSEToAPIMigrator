@@ -1,4 +1,4 @@
-﻿namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
+﻿namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
     /// <summary>
     /// Handles Web service request data in Xml/JSON Resource specialization
     /// </summary>

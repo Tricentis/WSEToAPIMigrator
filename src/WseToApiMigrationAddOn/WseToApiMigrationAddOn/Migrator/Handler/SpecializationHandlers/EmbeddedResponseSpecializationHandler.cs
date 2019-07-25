@@ -1,16 +1,16 @@
-﻿using Tricentis.TCAPIObjects.Objects;
+﻿using Tricentis.Automation.WseToApiMigrationAddOn.Extensions;
+using Tricentis.Automation.WseToApiMigrationAddOn.Helper;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
+using Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
+using Tricentis.TCAPIObjects.Objects;
 
-using WseToApiMigrationAddOn.Extensions;
-using WseToApiMigrationAddOn.Helper;
-using WseToApiMigrationAddOn.Migrator.Parser.Interfaces;
-using WseToApiMigrationAddOn.Migrator.Setter.Interfaces;
-
-namespace WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
+namespace Tricentis.Automation.WseToApiMigrationAddOn.Migrator.Handler.SpecializationHandlers {
     /// <summary>
     /// Handles Web service response data in XML/JSON embedded specialization
     /// </summary>
     public class EmbeddedResponseSpecializationHandler : AbstractSpecializationHandler {
         #region Public Methods and Operators
+
         /// <summary>
         /// Handles Web service response data in XML/JSON embedded specialization
         /// </summary>
