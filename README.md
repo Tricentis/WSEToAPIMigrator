@@ -1,20 +1,15 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# WSE To API Migrator project
+WSEToAPIMigrator project has been developed to migrate Webservice Engine 3.0 API testcases to API Engine 3.0. It might be possible that the project has not handled some user specific scenarios, spo the user can then extend the functionality provided by this project as per his/her needs.
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Cloning
+1.	Install Git.
+2.	Run git lfs install to setup global git hooks. You only need to run this once per machine.
+```
+    git clone https://github.com/Tricentis/WSEToAPIMigrator.git.
+```
+3.	Now you can git add binary files and commit them.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+# License
+Copyright (c) Tricentis GmbH. All rights reserved.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://www.visualstudio.com/en-us/docs/git/create-a-readme). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Licensed under the MIT license.
